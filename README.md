@@ -1,16 +1,29 @@
-# meals_app
+# Meals App
 
-A new Flutter project.
+Meals App is a Flutter application that helps users browse, view, and favorite different meal recipes. The app demonstrates key Flutter concepts such as navigation, state management, and custom widgets.
+
+## Features
+
+- Browse meals by category
+- View detailed information about each meal
+- Mark meals as favorites
+- Responsive and clean UI
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run this project:
 
-A few resources to get you started if this is your first Flutter project:
+1. Make sure you have [Flutter](https://docs.flutter.dev/get-started/install) installed.
+2. Clone this repository.
+3. Run `flutter pub get` to install dependencies.
+4. Start the app with `flutter run`.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Resources
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Flutter Documentation](https://docs.flutter.dev/)
+- [Flutter Cookbook](https://docs.flutter.dev/cookbook)
+- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+
+## License
+
+This project
