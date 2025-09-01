@@ -1,29 +1,47 @@
 # Meals App
 
-Meals App is a Flutter application that helps users browse, view, and favorite different meal recipes. The app demonstrates key Flutter concepts such as navigation, state management, and custom widgets.
+Meals App is a Flutter application to browse meals, view details, and mark favorites. It demonstrates clean UI, navigation, animations, and state management with Riverpod.
 
 ## Features
 
-- Browse meals by category
-- View detailed information about each meal
-- Mark meals as favorites
-- Responsive and clean UI
+- Browse meals and open detailed pages
+- Mark/unmark meals as favorites (Riverpod StateNotifier)
+- Smooth image loading with Hero + FadeInImage
+- Animated favorite icon (AnimatedSwitcher + ScaleTransition)
+- Responsive layout
+
+## Tech Stack
+
+- Flutter, Dart
+- flutter_riverpod (state management)
+- Navigator 1.0 (routing)
+- Hero, AnimatedSwitcher, ScaleTransition (animations)
+- transparent_image (placeholder image)
 
 ## Getting Started
 
-To run this project:
+Prerequisites:
+- Flutter SDK installed: https://docs.flutter.dev/get-started/install
 
-1. Make sure you have [Flutter](https://docs.flutter.dev/get-started/install) installed.
-2. Clone this repository.
-3. Run `flutter pub get` to install dependencies.
-4. Start the app with `flutter run`.
+Run locally:
+1. flutter pub get
+2. flutter run
 
-## Resources
+## Project Structure
 
-- [Flutter Documentation](https://docs.flutter.dev/)
-- [Flutter Cookbook](https://docs.flutter.dev/cookbook)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- lib/models: Data models (e.g., Meal)
+- lib/providers: Riverpod providers (favorites, etc.)
+- lib/widgets: Reusable UI components (MealItem, traits)
+- lib/screens: App screens (Meals list, Meal details)
+
+## How It Works
+
+- Favorites: favoriteMealsProvider manages a List<Meal> via StateNotifier. Toggling updates state and UI.
+- Navigation: Navigator.push to open MealDetailsScreen.
+- Animations: 
+  - Hero for shared image transitions between list and detail.
+  - AnimatedSwitcher + ScaleTransition to animate the favorite icon.
 
 ## License
 
-This project
+This project is for learning
