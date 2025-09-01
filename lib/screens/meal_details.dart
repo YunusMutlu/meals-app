@@ -30,9 +30,21 @@ class MealDetailsScreen extends ConsumerWidget {
                 ),
               );
             },
-            icon: Icon(
-              isFavorite ? Icons.favorite : Icons.favorite_border,
-              color: Colors.red.shade500,
+            icon: AnimatedSwitcher(
+              duration: Duration(milliseconds: 800),
+              transitionBuilder: (child, animation) {
+                return ScaleTransition(
+                  scale: animation,
+
+                  alignment: Alignment(0, -30),
+                  child: child,
+                );
+              },
+              child: Icon(
+                isFavorite ? Icons.favorite : Icons.favorite_border,
+                key: ValueKey(isFavorite),
+                color: Colors.red.shade500,
+              ),
             ),
           ),
         ],
@@ -40,10 +52,13 @@ class MealDetailsScreen extends ConsumerWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(
-              meal.imageUrl,
-              width: double.infinity,
-              fit: BoxFit.cover,
+            Hero(
+              tag: meal.id,
+              child: Image.network(
+                meal.imageUrl,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
             ),
             SizedBox(height: 14),
             Text(
